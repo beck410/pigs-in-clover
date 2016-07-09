@@ -1,0 +1,11 @@
+.section {
+
+}
+
+/**
+ * Section One
+ */
+
+.section-one {
+    @include section-background("{{ site.images.section-one | prepend: site.baseurl }}/backgroundImage.png")
+}
