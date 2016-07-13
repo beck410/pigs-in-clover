@@ -1,9 +1,10 @@
 @mixin section-background($type, $background) {
 
     @if $type == 'image' {
-        background: url($background) no-repeat center center fixed;
+        background: url($background) no-repeat;
+
     } @else {
-        background: $background no-repeat center center fixed;
+        background: $background no-repeat;
     }
 
     -webkit-background-size: cover;
@@ -11,4 +12,5 @@
     -o-background-size: cover;
     background-size: cover;
     position: relative;
+    min-height: 600px;
 }

@@ -83,7 +83,14 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
 }
 
+h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+}
 
+p {
+    font-size: 20px
+}
 
 /**
  * Links
@@ -162,7 +169,7 @@ pre {
     padding-left: $spacing-unit;
     @extend %clearfix;
 
-    @include media-query($on-laptop) {
+    @include media-query($laptop) {
         max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
         max-width:         calc(#{$content-width} - (#{$spacing-unit}));
         padding-right: $spacing-unit / 2;
@@ -202,3 +209,11 @@ pre {
         }
     }
 }
+
+/**
+ * Text
+ */
+
+.text--white {
+    color: white;
+ }

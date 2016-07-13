@@ -5,9 +5,5 @@ url: "http://beckcd.com/pigs-in-clover/" # the base hostname & protocol for your
 twitter_username: jekyllrb
 github_username:  jekyll
 
-images:
-    section-one:
-        folder: /images/section-one/
-
 # Build settings
 markdown: kramdown

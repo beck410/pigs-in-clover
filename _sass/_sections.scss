@@ -1,5 +1,9 @@
-.section {
+$social-image-size: 60px;
 
+.section {
+    overflow: hidden;
+
+    padding-left: 50px;
 }
 
 /**
@@ -7,5 +11,128 @@
  */
 
 .section-one {
-    @include section-background("{{ site.images.section-one | prepend: site.baseurl }}/backgroundImage.png")
+    @include row;
+    @include section-background("image", "../images/section-one/backgroundImage.png")
+}
+
+@include media-query($tablet) {
+    .section-one {
+        background-image: url("../images/section-one/backgroundImage-sm.png");
+    }
+}
+
+.section-one--left-col {
+    @include span-columns(4);
+
+    padding-top: 250px;
+}
+
+.section-one--right-col {
+    @include span-columns(8);
+
+    position: relative;
+}
+
+.section-one--social-container {
+    position: absolute;
+    right: 50px;
+}
+
+.section-one--social-image {
+    height: $social-image-size;
+    width: $social-image-size;
+}
+
+@include media-query($tablet) {
+    .section-one--social-image {
+        height: $social-image-size - 20px;
+        width: $social-image-size - 20px;
+    }
+}
+
+.section-one--logo {
+    position: absolute;
+    bottom: 10px;
+}
+
+/**
+ * Section Two
+ */
+
+.section-two {
+    @include section-background("color", white);
+}
+
+.section-two--content {
+    @include span-columns(10);
+    @include shift(1);
+
+    text-align: center;
+    padding-top: 50px;
+}
+
+.section-two--image {
+    max-width: 400px;
+}
+
+/**
+ * Section Three
+ */
+
+.section-three {
+    @include section-background('color', $teal-color);
+
+    padding-top: 50px;
+}
+
+.section-three--wrapper {
+    @include span-columns(11);
+}
+
+.section-three--left-col {
+    @include span-columns(4);
+}
+
+.section-three--right-col {
+    @include span-columns(8);
+}
+
+/**
+ * Section Three
+ */
+
+.section-four {
+    @include section-background('color', white);
+
+    padding-top: 50px;
+ }
+
+.section-four--left-col {
+    @include span-columns(6);
+    @include omega();
+ }
+
+.section-four--right-col {
+    @include span-columns(6);
+ }
+
+.section-four--boards {
+    @include span-columns(10);
+    @include shift(1);
+}
+
+.section-four--board {
+    @include span-columns(5);
+    @include omega();
+    @include shift(1);
+
+    border: 3px solid grey;
+    border-radius: 10%;
+    height: 130px;
+    margin-top: 30px;
+
+    img {
+        display: block;
+        margin: auto;
+    }
 }

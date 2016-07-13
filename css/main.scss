@@ -7,7 +7,7 @@
 
 // Our variables
 $base-font-family: Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
+$base-font-size:   20px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
@@ -20,12 +20,16 @@ $brand-color:      #2a7ae2;
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
+$teal-color:       #309A87;
+$dark-grey-color:  #005A4E;
 
 // Width of the content area
 $content-width:    800px;
 
-$on-palm:          600px;
-$on-laptop:        800px;
+$small-mobile:     400px;
+$large-mobile:     600px;
+$tablet:           800px;
+$laptop:           1000px;
 
 
 
@@ -46,6 +50,8 @@ $on-laptop:        800px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
+        "bourbon/bourbon",
+        "neat/neat",
         "base",
         "layout",
         "syntax-highlighting",

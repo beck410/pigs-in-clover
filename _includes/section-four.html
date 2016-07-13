@@ -1,0 +1,26 @@
+<div class="section section-four">
+    <div class="section-four--left-col">
+        <h2>PIGS ARE FUN FOR ALL!</h2>
+        <p>
+            One hundred and twenty seven years afer it's release the new Pigs In The Clover will pay homage to the game's legendary heritage while providing new game play and style for the modern era.
+        </p>
+        <p>
+            The game play faithfully represents the original. Pigs In The Clover is an intuitive dexterity game fun and safe for all ages. Manipulate the board (your device) and get the pigs into the center (pig pen) to win!
+        </p>
+    </div>
+    <div class="section-four--right-col">
+        <div class="section-four--boards">
+            {% for num in (1...2) %}
+                <div class="section-four--board">
+                    <img src="../images/section-four/boards/board{{num}}.png" alt="Pigs in the clover board {{num}}" />
+                </div>
+            {% endfor %}
+
+            {% for num in (3...6) %}
+                <div class="section-four--board">
+                    <img src="../images/section-four/boards/board{{num}}.png" alt="Pigs in the clover board {{num}}" />
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
