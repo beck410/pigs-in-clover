@@ -10,17 +10,23 @@
     </div>
     <div class="section-four--right-col">
         <div class="section-four--boards">
-            {% for num in (1...2) %}
-                <div class="section-four--board">
-                    <img src="../images/section-four/boards/board{{num}}.png" alt="Pigs in the clover board {{num}}" />
-                </div>
-            {% endfor %}
-
-            {% for num in (3...6) %}
-                <div class="section-four--board">
-                    <img src="../images/section-four/boards/board{{num}}.png" alt="Pigs in the clover board {{num}}" />
-                </div>
-            {% endfor %}
+            <div class="section-four--board-wrapper clearfix">
+                <div class="section-four--board-description">Go back in time and play the original boards from 1889 and 1982...</div>
+                {% for num in (1...2) %}
+                    <div class="section-four--board">
+                        <img src="../images/section-four/boards/board{{num}}.png" alt="Pigs in the clover board {{num}}" />
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="section-four--board-wrapper clearfix">
+                <div class="section-four--board-description">Play the crazy new boards and unlock the world of Pigs in The Clover...</div>
+                {% for num in (3...6) %}
+                    <div class="section-four--board">
+                        <img src="../images/section-four/boards/board{{num}}.png" alt="Pigs in the clover board {{num}}" />
+                    </div>
+                {% endfor %}
+            </div>
+            <hr>
         </div>
     </div>
 </div>
