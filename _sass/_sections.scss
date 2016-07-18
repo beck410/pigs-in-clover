@@ -38,11 +38,6 @@ $social-image-size: 60px;
     right: 50px;
 }
 
-.section-one--social-image {
-    height: $social-image-size;
-    width: $social-image-size;
-}
-
 @include media-query($tablet) {
     .section-one--social-image {
         height: $social-image-size - 20px;
@@ -98,7 +93,7 @@ $social-image-size: 60px;
 }
 
 /**
- * Section Three
+ * Section Four
  */
 
 .section-four {
@@ -147,4 +142,25 @@ $social-image-size: 60px;
 
 .section-four--board-wrapper {
     border-top: 1px solid grey;
+}
+
+/**
+ * Section Five
+ */
+
+.section-five {
+    @include section-background('color', $teal-color);
+}
+
+.section-five--header {
+
+}
+
+/**
+ * Shared
+ */
+
+.section--social-image {
+    height: $social-image-size;
+    width: $social-image-size;
 }
