@@ -23,8 +23,6 @@ body {
     -webkit-text-size-adjust: 100%;
 }
 
-
-
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
@@ -84,12 +82,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-    font-size: 2.5em;
+    font-size: $header-two-font-size;
     font-weight: 700;
 }
 
 p {
     font-size: 20px
+}
+
+@include media-query($tablet) {
+    body, p {
+        font-size: $base-font-size * 0.875;
+    }
+
+    h2 {
+        font-size: $header-two-font-size * 0.875;
+    }
+}
+
+@include media-query($large-mobile) {
+    h2 {
+        font-size: $header-two-font-size * 0.5;
+    }
 }
 
 /**

@@ -4,6 +4,14 @@ $social-image-size: 60px;
     overflow: hidden;
 
     padding-left: 50px;
+    padding-right: 50px;
+}
+
+@include media-query($tablet) {
+    .section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 /**
@@ -21,24 +29,32 @@ $social-image-size: 60px;
     }
 }
 
+.section-one--pitc-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 .section-one--left-col {
-    @include span-columns(4);
+    @include span-columns(6);
 
     padding-top: 250px;
 }
 
 .section-one--right-col {
-    @include span-columns(8);
-
     position: relative;
 }
 
 .section-one--social-container {
     position: absolute;
-    right: 50px;
+    right: 0;
 }
 
 @include media-query($tablet) {
+    .section-one--social-container a {
+        display: block;
+    }
+
     .section-one--social-image {
         height: $social-image-size - 20px;
         width: $social-image-size - 20px;
@@ -150,10 +166,72 @@ $social-image-size: 60px;
 
 .section-five {
     @include section-background('color', $teal-color);
+
+    overflow: visible;
+    color: white;
+    padding-right: 50px;
+}
+
+.section-five--icon-container {
+    width: 100%;
+    padding: auto 20px;
+}
+
+.section-five--icon {
+    position: absolute;
+    top: -50px;
+}
+
+.section-five--icon-left {
+    left: 50px;
+}
+
+.section-five--icon-right {
+    right: 50px;
 }
 
 .section-five--header {
+    text-align: center;
+    padding-top: 50px;
+}
 
+.section-five--content {
+    margin-top: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.section-five--cols {
+    @include span-columns(4);
+    @include omega(3n);
+    min-height: 400px;
+    padding: 30px;
+}
+
+.section-five--col-one {
+    border-right: 2px solid white;
+}
+
+.section-five--col-two {
+    border-right: 2px solid white;
+    text-align: center;
+
+    a {
+        display: block;
+    }
+}
+
+.section-five--col-three {
+    margin-top: 70px;
+}
+
+.section-five--app-icon {
+    padding-top: 20px;
+}
+
+.section-five--email {
+    text-decoration: underline;
+    font-weight: 700;
 }
 
 /**

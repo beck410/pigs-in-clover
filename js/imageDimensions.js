@@ -9,9 +9,8 @@
 
     function setImageDimensions(){
 
-        var extraPixels = addExtraPixels(),
-            browserWidth = $(window).width(),
-            browserHeight = $(window).height() + extraPixels;
+        var browserWidth = $(window).width(),
+            browserHeight = $(window).height() + addExtraPixels();
 
         $('.section').each(function() {
             if($(this).height() < browserHeight && browserWidth > 600) {

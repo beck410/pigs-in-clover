@@ -10,6 +10,7 @@ $base-font-family: Helvetica, Arial, sans-serif;
 $base-font-size:   20px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
+$header-two-font-size: 2em;
 
 $spacing-unit:     30px;
 
@@ -51,8 +52,8 @@ $laptop:           1000px;
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "bourbon/bourbon",
-        "neat/neat",
         "base",
+        "neat/neat",
         "layout",
         "syntax-highlighting",
         "mixins",
