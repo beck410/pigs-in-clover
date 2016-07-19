@@ -25,16 +25,8 @@ $social-image-size: 60px;
     @include section-background("image", "../images/section-one/backgroundImage.png")
 }
 
-@include media-query($tablet) {
-    .section-one {
-        background-image: url("../images/section-one/backgroundImage-sm.png");
-    }
-}
-
 .section-one--pitc-logo {
-    position: absolute;
-    top: 0;
-    left: 0;
+    display: none;
 }
 
 .section-one--left-col {
@@ -52,7 +44,20 @@ $social-image-size: 60px;
     right: 0;
 }
 
+.section-one--logo {
+    position: absolute;
+    bottom: 10px;
+}
+
 @include media-query($tablet) {
+    .section-one {
+        background-image: url("../images/section-one/backgroundImage-sm.png");
+    }
+
+    .section-one--pitc-logo {
+        display: block;
+    }
+
     .section-one--social-container a {
         display: block;
     }
@@ -61,11 +66,12 @@ $social-image-size: 60px;
         height: $social-image-size - 20px;
         width: $social-image-size - 20px;
     }
-}
 
-.section-one--logo {
-    position: absolute;
-    bottom: 10px;
+    .section-one--pitc-logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
 }
 
 /**
