@@ -5,12 +5,14 @@ $social-image-size: 60px;
 
     padding-left: 50px;
     padding-right: 50px;
+    padding-top: 50px;
 }
 
 @include media-query($tablet) {
     .section {
         padding-left: 15px;
         padding-right: 15px;
+        padding-top: 20px;
     }
 }
 
@@ -79,11 +81,16 @@ $social-image-size: 60px;
     @include shift(1);
 
     text-align: center;
-    padding-top: 50px;
 }
 
 .section-two--image {
     max-width: 400px;
+}
+
+@include media-query($large-mobile) {
+    .section-two--image {
+        max-width: 200px;
+    }
 }
 
 /**
@@ -92,12 +99,6 @@ $social-image-size: 60px;
 
 .section-three {
     @include section-background('color', $teal-color);
-
-    padding-top: 50px;
-}
-
-.section-three--wrapper {
-    @include span-columns(11);
 }
 
 .section-three--left-col {
@@ -108,21 +109,45 @@ $social-image-size: 60px;
     @include span-columns(8);
 }
 
+.section-three--game-image {
+    display: none;
+}
+
+@include media-query($tablet) {
+    .section-three--left-col {
+        @include span-columns(6);
+    }
+
+    .section-three--right-col {
+        @include span-columns(6);
+    }
+}
+
+@include media-query($large-mobile) {
+    .section-three--left-col {
+        display: none;
+    }
+
+    .section-three--game-image {
+        display: block;
+    }
+
+    .section-three--right-col {
+        @include span-columns(12);
+    }
+}
+
 /**
  * Section Four
  */
 
 .section-four {
     @include section-background('color', white);
-
-    padding-top: 50px;
  }
 
 .section-four--left-col {
     @include span-columns(6);
     @include omega();
-
-    padding-right: 50px;
  }
 
 .section-four--right-col {
@@ -160,6 +185,21 @@ $social-image-size: 60px;
     border-top: 1px solid grey;
 }
 
+@include media-query($tablet) {
+    .section-four--left-col {
+        @include span-columns(12);
+    }
+
+    .section-four--right-col {
+        @include span-columns(12);
+    }
+
+    .section-four--board {
+        border: none;
+        min-height: 100px;
+    }
+}
+
 /**
  * Section Five
  */
@@ -169,12 +209,6 @@ $social-image-size: 60px;
 
     overflow: visible;
     color: white;
-    padding-right: 50px;
-}
-
-.section-five--icon-container {
-    width: 100%;
-    padding: auto 20px;
 }
 
 .section-five--icon {
@@ -183,16 +217,15 @@ $social-image-size: 60px;
 }
 
 .section-five--icon-left {
-    left: 50px;
+    left: 0;
 }
 
 .section-five--icon-right {
-    right: 50px;
+    right: 0;
 }
 
 .section-five--header {
     text-align: center;
-    padding-top: 50px;
 }
 
 .section-five--content {
@@ -232,6 +265,47 @@ $social-image-size: 60px;
 .section-five--email {
     text-decoration: underline;
     font-weight: 700;
+}
+
+@include media-query($small-desktop) {
+    .section-five--icon {
+        width: 150px;
+    }
+
+    .section-five--content {
+        margin-top: 20px;
+    }
+}
+
+@include media-query($laptop) {
+    .section-five--icon {
+        display: none;
+    }
+
+    .section-five--content {
+        margin: 20px;
+    }
+}
+
+@include media-query($tablet) {
+    .section-five--content {
+        text-align: center;
+    }
+
+    .section-five--col-one,
+    .section-five--col-two {
+        border-right: none;
+        border-bottom: 2px solid white;
+    }
+
+    .section-five--cols {
+        @include span-columns(12);
+        min-height: inherit;
+    }
+
+    .section-five--col-three {
+        margin-top: auto;
+    }
 }
 
 /**
