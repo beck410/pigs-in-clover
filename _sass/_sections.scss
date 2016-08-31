@@ -72,6 +72,33 @@ $social-image-size: 60px;
         top: 0;
         left: 0;
     }
+
+    .section-one--left-col {
+        float: right;
+        text-align: right;
+    }
+
+    .section-one--logo {
+        right: 0;
+
+        div {
+            display: inline;
+        }
+    }
+}
+
+@include media-query($large-mobile) {
+    .section-one--left-col {
+        width: 100%;
+        padding-top: 400px;
+        text-align: left;
+    }
+
+    .section-one--itunes,
+    .section-one--google {
+        float: right;
+        width: 50%;
+    }
 }
 
 /**
