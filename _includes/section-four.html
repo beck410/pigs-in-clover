@@ -11,7 +11,7 @@
     <div class="section-four--right-col">
         <div class="section-four--boards">
             <div class="section-four--board-wrapper clearfix">
-                <div class="section-four--board-description">Go back in time and play the original boards from 1889 and 1932...</div>
+                <div class="section-four--board-description">Go back in time and play the original boards from 1889 and 1932 & try the all-new crazy pig-rolling adventures, even a Westworld inspired maze!</div>
                 {% for num in (1...2) %}
                     <div class="section-four--board">
                         <img src="{{ 'images/section-four/boards/board' | append: num | append: '.png' | prepend: site.baseurl }}" alt="Pigs in the clover board {{num}}" />
@@ -19,8 +19,7 @@
                 {% endfor %}
             </div>
             <div class="section-four--board-wrapper clearfix">
-                <div class="section-four--board-description">Play the crazy new boards and unlock the world of Pigs in The Clover...</div>
-                {% for num in (3...6) %}
+                {% for num in (3...4) %}
                     <div class="section-four--board">
                         <img src="{{ 'images/section-four/boards/board' | append: num | append: '.png' | prepend: site.baseurl }}" alt="Pigs in the clover board {{num}}" />
                     </div>

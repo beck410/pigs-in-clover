@@ -1,7 +1,7 @@
 # Site settings
 title: Arkipolygon | Pigs In Clover
-baseurl: "/pigs-in-clover/" # the subpath of your site, e.g. /blog/
-url: "http://beckcd.com/pigs-in-clover/" # the base hostname & protocol for your site
+baseurl: "/" # the subpath of your site, e.g. /blog/
+url: "pigsintheclover.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
 

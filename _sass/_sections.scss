@@ -30,13 +30,22 @@ $social-image-size: 60px;
 }
 
 .section-one--left-col {
-    @include span-columns(6);
+    @include span-columns(4);
 
     padding-top: 250px;
 }
 
+.section-one--pitc-video {
+    width: 80%;
+    height: 400px;
+    margin-top: 150px;
+}
+
 .section-one--right-col {
+    @include span-columns(8);
+
     position: relative;
+    text-align: center;
 }
 
 .section-one--social-container {
@@ -49,17 +58,14 @@ $social-image-size: 60px;
     bottom: 10px;
 }
 
+.app-store-icon {
+    max-height: 70px;
+    margin-bottom: 20px;
+}
+
 @include media-query($tablet) {
     .section-one {
         background-image: url("../images/section-one/backgroundImage-sm.png");
-    }
-
-    .section-one--pitc-logo {
-        display: block;
-    }
-
-    .section-one--social-container a {
-        display: block;
     }
 
     .section-one--social-image {
@@ -73,9 +79,9 @@ $social-image-size: 60px;
         left: 0;
     }
 
+    .section-one--right-col,
     .section-one--left-col {
-        float: right;
-        text-align: right;
+        @include span-columns(12);
     }
 
     .section-one--logo {
@@ -85,19 +91,32 @@ $social-image-size: 60px;
             display: inline;
         }
     }
-}
 
-@include media-query($large-mobile) {
     .section-one--left-col {
-        width: 100%;
-        padding-top: 400px;
         text-align: left;
+        float: right;
+        text-align: right;
     }
 
     .section-one--itunes,
     .section-one--google {
         float: right;
         width: 50%;
+    }
+
+    .section-one--pitc-video {
+        width: 95%;
+        height: 300px;
+        margin-top: 60px;
+        margin-bottom: 20px;
+    }
+
+    .section-one--social-container {
+        text-align: left;
+    }
+
+    .section-one--social-container a {
+        display: inline-block;
     }
 }
 
@@ -197,9 +216,6 @@ $social-image-size: 60px;
     @include omega();
     @include shift(1);
 
-    border: 3px solid grey;
-    border-radius: 10%;
-    height: 130px;
     margin-bottom: 30px;
 
     img {
@@ -209,13 +225,11 @@ $social-image-size: 60px;
 }
 
 .section-four--board-description {
+    @include shift(1);
+
     font-size: 0.75em;
     font-style: italic;
     padding-bottom: 10px;
-}
-
-.section-four--board-wrapper {
-    border-top: 1px solid grey;
 }
 
 @include media-query($tablet) {
