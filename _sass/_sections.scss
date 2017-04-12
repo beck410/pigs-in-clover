@@ -53,11 +53,6 @@ $social-image-size: 40px;
     right: 0;
 }
 
-.section-one--logo {
-    position: absolute;
-    bottom: 10px;
-}
-
 .app-store-icon {
     max-height: 70px;
     margin-bottom: 20px;
@@ -82,14 +77,6 @@ $social-image-size: 40px;
     .section-one--right-col,
     .section-one--left-col {
         @include span-columns(12);
-    }
-
-    .section-one--logo {
-        right: 0;
-
-        div {
-            display: inline;
-        }
     }
 
     .section-one--left-col {
@@ -352,6 +339,10 @@ $social-image-size: 40px;
 
     .section-five--col-three {
         margin-top: auto;
+    }
+
+    .section-five--social {
+        padding-bottom: 5px;
     }
 }
 
