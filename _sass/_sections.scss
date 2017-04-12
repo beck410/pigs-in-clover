@@ -301,6 +301,10 @@ $social-image-size: 40px;
     font-weight: 700;
 }
 
+.section-five--social {
+    padding-bottom: 5px;
+}
+
 @include media-query($small-desktop) {
     .section-five--icon {
         width: 150px;
@@ -339,10 +343,6 @@ $social-image-size: 40px;
 
     .section-five--col-three {
         margin-top: auto;
-    }
-
-    .section-five--social {
-        padding-bottom: 5px;
     }
 }
 
