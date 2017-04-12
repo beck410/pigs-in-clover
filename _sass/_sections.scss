@@ -285,6 +285,7 @@ $social-image-size: 40px;
 
     a {
         display: block;
+        margin-top: 5px;
     }
 }
 
@@ -299,10 +300,6 @@ $social-image-size: 40px;
 .section-five--email {
     text-decoration: underline;
     font-weight: 700;
-}
-
-.section-five--social {
-    padding-bottom: 5px;
 }
 
 @include media-query($small-desktop) {
